@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaDownload } from 'react-icons/fa';
-import profilePic from '../assets/profile.jpeg';
+// import profilePic from '../assets/profile.jpeg'; // Optional: uncomment if you're using an image
 
 export default function Hero() {
   return (
@@ -12,14 +12,11 @@ export default function Hero() {
       {/* Left content */}
       <div className="max-w-xl animate__animated animate__fadeInLeft">
         <h2 className="text-6xl font-extrabold text-gray-900 mb-6">
-          Hi, I’m <span className="text-blue-700">Pooja Masuram</span>{' '}
+          Hi, I’m <span className="text-blue-700">Yash Arravapula</span>{' '}
           <span role="img" aria-label="waving hand" className="animate-wave inline-block">👋</span>
         </h2>
         <p className="text-xl text-gray-800 mb-8 leading-relaxed max-w-lg">
-          A passionate and detail-oriented UI Developer with 2+ years of experience crafting
-          beautiful, responsive, and user-friendly web applications. Skilled in React.js, JavaScript,
-          and Figma, I love turning complex ideas into intuitive digital experiences that delight
-          users and drive business success. Let’s build something amazing together!
+          I’m a passionate .NET Developer with 4+ years of experience building scalable web apps using C#, ASP.NET Core, and React. I specialize in developing RESTful APIs, microservices, and cloud-native solutions on Azure and AWS to deliver secure and high-performing applications.
         </p>
 
         <div className="space-y-4 text-gray-700 text-lg mb-8">
@@ -27,15 +24,15 @@ export default function Hero() {
             <FaMapMarkerAlt className="text-pink-600" /> Atlanta, GA
           </p>
           <p className="flex items-center justify-center md:justify-start gap-3">
-            <FaPhoneAlt className="text-pink-600" /> (913)-712-6982
+            <FaPhoneAlt className="text-pink-600" /> (470)-601-3859
           </p>
           <p className="flex items-center justify-center md:justify-start gap-3">
-            <FaEnvelope className="text-pink-600" /> poojamasuram11@gmail.com
+            <FaEnvelope className="text-pink-600" /> yashwantharravapula@gmail.com
           </p>
         </div>
 
         <a
-          href="/Pooja_Masuram.pdf"  // Make sure your resume PDF is in the public folder
+          href="/Yash .Net Developer.pdf"  // Place your PDF in the public folder
           download
           className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300 text-lg"
         >
@@ -44,18 +41,20 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Right image with glowing animated border */}
+      {/* Optional Profile Image */}
+      {/* 
       <div
         className="max-w-md rounded-full overflow-hidden shadow-2xl ring-8 ring-blue-400 ring-opacity-70 animate-pulse"
         style={{ animationDuration: '3s' }}
       >
         <img
           src={profilePic}
-          alt="Pooja Masuram"
+          alt="Yash Arravapula"
           className="w-[32rem] h-[32rem] object-cover rounded-full border-4 border-blue-600"
           loading="lazy"
         />
       </div>
+      */}
     </section>
   );
 }

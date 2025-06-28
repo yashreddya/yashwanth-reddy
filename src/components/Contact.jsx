@@ -17,10 +17,10 @@ export default function Contact() {
           <FaMapMarkerAlt className="animate-bounce" /> <span className="text-gray-800">Atlanta, GA</span>
         </div>
         <div className="flex items-center justify-center gap-2 text-pink-600">
-          <FaPhoneAlt className="animate-bounce" /> <span className="text-gray-800">(913)-712-6982</span>
+          <FaPhoneAlt className="animate-bounce" /> <span className="text-gray-800">|+1 (470-601-3859) </span>
         </div>
         <div className="flex items-center justify-center gap-2 text-pink-600">
-          <FaEnvelope className="animate-bounce" /> <span className="text-gray-800">poojamasuram11@gmail.com</span>
+          <FaEnvelope className="animate-bounce" /> <span className="text-gray-800">yashwantharravapula@gmail.com </span>
         </div>
       </div>
     </div>

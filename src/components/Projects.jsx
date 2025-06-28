@@ -4,16 +4,28 @@ import { FaLaptopCode } from 'react-icons/fa';
 export default function Projects() {
   const projectList = [
     {
-      title: 'Real-Time Social Media Dashboard',
+      title: 'Inventory Management System',
       description:
-        'Built with React.js, Firebase, and Chart.js for live analytics and clean UI. Features include engagement tracking, scheduling, dynamic chart visualizations, and real-time content management.',
-      color: 'from-purple-100 to-purple-200'
+        'Built a role-based web application using ASP.NET Core, Entity Framework, and SQL Server to manage product inventory, supplier records, and audit logs. Includes search, bulk upload, and data export features.',
+      color: 'from-blue-100 to-blue-200',
     },
     {
-      title: 'E-Commerce Store with Payments',
+      title: 'Cloud-Based Task Tracker',
       description:
-        'Developed with React.js, MongoDB, Node.js, and Stripe integration. Includes product listings, filtering, secure checkout, order tracking, and admin dashboards.',
-      color: 'from-purple-100 to-purple-200'
+        'Developed a multi-user task tracker using ASP.NET Core Web API and React.js. Integrated JWT authentication and deployed it to Azure App Services with CI/CD using GitHub Actions.',
+      color: 'from-green-100 to-green-200',
+    },
+    {
+      title: 'Secure File Sharing Portal',
+      description:
+        'Engineered a .NET Core and Angular-based document-sharing platform supporting file encryption, expiration control, and email notifications. Used Azure Blob Storage for cloud persistence.',
+      color: 'from-purple-100 to-purple-200',
+    },
+    {
+      title: 'Customer Feedback Analytics Tool',
+      description:
+        'Created a full-stack dashboard with .NET Core APIs, React.js frontend, and MongoDB. Features include sentiment tagging, search filters, and real-time chart rendering using Chart.js.',
+      color: 'from-yellow-100 to-yellow-200',
     },
   ];
 
@@ -30,12 +42,13 @@ export default function Projects() {
         <h2 className="text-4xl font-bold text-center mb-12" data-aos="zoom-in">
           Projects
         </h2>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {projectList.map((project, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br ${project.color} p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-transform duration-500 ease-in-out`}
+              className={`bg-gradient-to-br ${project.color} p-6 rounded-xl shadow-xl ring-1 ring-gray-200 transition-transform transform hover:-translate-y-1 hover:-rotate-1 hover:ring-2 hover:ring-purple-400 hover:shadow-2xl duration-500 ease-in-out`}
               data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+              data-aos-delay={`${index * 100}`}
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {project.title}

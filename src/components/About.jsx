@@ -10,10 +10,10 @@ export default function About() {
         </div>
         <h2 className="text-4xl font-bold mb-6">About Me</h2>
         <p className="text-lg leading-relaxed mb-4" data-aos="fade-right">
-          I'm an innovative and detail-oriented UI Developer with over 2+ years of experience building responsive and user-centric interfaces. I bring ideas to life using tools like React.js, JavaScript, and Figma while collaborating cross-functionally to improve user journeys.
+          I’m a .NET Developer with 4+ years of experience building scalable web applications using C#, ASP.NET Core, and React. I specialize in developing RESTful APIs, integrating cloud-native solutions on Azure and AWS, and optimizing databases using SQL Server and MongoDB.
         </p>
         <p className="text-lg leading-relaxed" data-aos="fade-left">
-          My passion lies in transforming designs into intuitive, pixel-perfect web applications. I'm a strong advocate for design thinking, agile methodologies, and delivering seamless experiences that truly engage users.
+          I’m passionate about creating efficient full-stack applications, driving DevOps automation with Docker and CI/CD pipelines, and delivering secure, high-performing software. I thrive in agile environments and enjoy collaborating with cross-functional teams to solve complex business challenges.
         </p>
       </div>
     </section>
