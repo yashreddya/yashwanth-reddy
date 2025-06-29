@@ -53,7 +53,7 @@ const Hero = () => {
 
         <div className="text-gray-800 space-y-2 mb-6">
           <div className="flex items-center">
-            <FaMapMarkerAlt className="mr-2 text-emerald-600" /> Atlanta, GA
+            <FaMapMarkerAlt className="mr-2 text-emerald-600" /> Alpharetta, GA
           </div>
           <div className="flex items-center">
             <FaPhoneAlt className="mr-2 text-emerald-600" />+1 (678) 208 9897
