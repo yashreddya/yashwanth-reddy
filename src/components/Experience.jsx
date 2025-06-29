@@ -4,73 +4,77 @@ import { FaBriefcase } from 'react-icons/fa';
 export default function Experience() {
   const experiences = [
     {
-      role: '.NET Developer',
-      company: 'ADP Technology Services, Inc., USA',
+      role: 'Full Stack Java Developer',
+      company: 'AT&T Services Inc., USA',
       date: 'Jan 2023 – Present',
-      techStack: ['C#', '.NET Core', 'React', 'Azure', 'Docker', 'Kubernetes', 'SQL Server'],
+      techStack: ['Java', 'Spring Boot', 'React', 'GraphQL', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'MongoDB', 'Neo4j'],
       points: [
-        'Migrated legacy payroll and HR systems to .NET Core to improve performance and scalability.',
-        'Developed responsive UIs using React, TypeScript, HTML5, and CSS3.',
-        'Designed secure RESTful and SOAP APIs to integrate with external systems.',
-        'Built scalable microservices with ASP.NET Core, containerized via Docker and deployed on Azure using Kubernetes.',
-        'Optimized SQL Server, Cassandra, and MongoDB queries to reduce latency in data-heavy applications.',
-        'Ensured security compliance (SOC 2, HIPAA) using OAuth2, JWT, and IdentityServer.',
-        'Implemented CI/CD pipelines using Jenkins and Git with infrastructure-as-code via Terraform.',
+        'Replaced legacy systems with Spring Boot microservices to improve scalability.',
+        'Built APIs with REST/GraphQL for telecom platforms.',
+        'Created dynamic UIs using React and Angular.',
+        'Used Docker, Kubernetes, and Jenkins for cloud-native deployments.',
+        'Integrated Neo4j for graph-based network visualization.',
       ],
     },
     {
-      role: '.NET Developer',
-      company: 'GlobalTech, India',
+      role: 'Java Developer',
+      company: 'Intex Technologies Ltd, India',
       date: 'Feb 2019 – Aug 2021',
-      techStack: ['ASP.NET MVC', 'C#', 'Angular', 'MySQL', 'AWS', 'Selenium'],
+      techStack: ['Java', 'Spring Boot', 'MySQL', 'React', 'AWS', 'Selenium'],
       points: [
-        'Developed enterprise-grade web apps using ASP.NET MVC and Angular.',
-        'Built REST APIs and microservices to improve modular communication and workflows.',
-        'Tuned complex SQL/MySQL queries and indexing strategies to improve performance.',
-        'Deployed applications on AWS using EC2, RDS, Lambda, and CloudFormation.',
-        'Automated frontend and backend testing with Selenium and NUnit/xUnit.',
-        'Collaborated in Agile sprints for story grooming, code reviews, and feature delivery.',
+        'Developed backend services and REST APIs using Spring Boot.',
+        'Worked with React for building responsive UI components.',
+        'Optimized SQL queries and indexing strategies.',
+        'Deployed apps on AWS with EC2, Lambda, and S3.',
+        'Automated UI tests with Selenium WebDriver.',
       ],
     },
   ];
 
   return (
-    <section id="experience" className="bg-white py-20 px-6 text-gray-800" data-aos="fade-up">
-      <div className="max-w-5xl mx-auto">
-        <div className="flex justify-center mb-4 text-blue-600 text-4xl animate-bounce">
-          <FaBriefcase />
+    <section id="experience" className="bg-gradient-to-b from-purple-100 to-violet-200 py-20 px-4 text-slate-800">
+      <div className="max-w-3xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="flex justify-center text-5xl text-blue-900 mb-4 animate-pulse">
+            <FaBriefcase />
+          </div>
+          <h2 className="text-4xl font-extrabold text-violet-800">Work Experience</h2>
+          <p className="text-md text-purple-700 mt-2">Here’s a glimpse into my professional journey</p>
         </div>
-        <h2 className="text-4xl font-bold text-center mb-12" data-aos="zoom-in">Experience</h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="bg-gray-100 p-6 rounded-xl shadow-lg border-l-4 border-blue-500 hover:shadow-2xl hover:scale-105 transition-transform duration-500 ease-in-out"
-              data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
-            >
-              <div className="flex items-center gap-2 mb-1 text-blue-700">
-                <h3 className="text-lg font-semibold">{exp.role}</h3>
-              </div>
-              <p className="text-sm text-gray-600 italic">{exp.company}</p>
-              <p className="text-sm text-gray-500 mb-2">{exp.date}</p>
-              <div className="flex flex-wrap gap-2 mb-2">
-                {exp.techStack.map((tech, idt) => (
-                  <span
-                    key={idt}
-                    className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-                {exp.points.map((point, idx) => (
-                  <li key={idx} data-aos="fade-up" data-aos-delay={`${idx * 100}`}>{point}</li>
-                ))}
-              </ul>
+
+        {/* Experience Cards */}
+        {experiences.map((exp, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl border-l-4 border-violet-600 shadow-md mb-10 p-6 transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] hover:shadow-violet-400 hover:shadow-lg group"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
+            <p className="text-sm text-violet-600 font-medium">{exp.date}</p>
+            <h3 className="text-xl font-bold text-slate-800 mt-1 group-hover:text-violet-800">{exp.role}</h3>
+            <p className="text-md italic text-purple-700 mb-4">{exp.company}</p>
+
+            {/* Tech Stack Tags */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {exp.techStack.map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="bg-indigo-100 text-indigo-800 group-hover:bg-indigo-200 group-hover:text-indigo-900 text-xs font-medium px-3 py-0.5 rounded-full transition-all duration-300"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
-          ))}
-        </div>
+
+            {/* Bullet Points */}
+            <ul className="list-disc list-inside text-slate-700 text-sm space-y-1">
+              {exp.points.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );

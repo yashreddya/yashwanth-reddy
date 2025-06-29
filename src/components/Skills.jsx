@@ -1,78 +1,94 @@
 import React from 'react';
 import {
-  FaReact,
-  FaHtml5,
-  FaCss3Alt,
-  FaGitAlt,
-  FaDocker,
-  FaAws,
-  FaTools,
-  FaCogs,
-  FaDatabase,
-  FaCloud,
-  FaCode,
+  FaJava, FaReact, FaAngular, FaHtml5, FaCss3Alt, FaDatabase,
+  FaAws, FaBug, FaGitAlt, FaCloud, FaTools, FaCode, FaLinux
 } from 'react-icons/fa';
 import {
-  SiMongodb,
-  SiJenkins,
-  SiKubernetes,
-  SiGraphql,
-  SiTypescript,
-  SiAngular,
-  SiRedux,
-  SiPostman,
-  SiTerraform,
-  SiJson,
-  SiJavascript
+  SiSpringboot, SiJenkins, SiDocker, SiKubernetes, SiMongodb,
+  SiPostgresql, SiMysql, SiTypescript, SiJson, SiRedux,
+  SiSelenium, SiGraphql, SiBitbucket
 } from 'react-icons/si';
 
 export default function Skills() {
+  const categories = [
+    {
+      title: 'Frontend',
+      color: 'text-pink-600',
+      skills: [
+        { name: 'React.js', icon: <FaReact className="text-blue-500" /> },
+        { name: 'Angular', icon: <FaAngular className="text-red-600" /> },
+        { name: 'HTML5 / CSS3', icon: <FaHtml5 className="text-orange-600" /> },
+        { name: 'TypeScript / JS', icon: <SiTypescript className="text-blue-700" /> },
+        { name: 'Redux / JSON', icon: <SiRedux className="text-purple-600" /> },
+      ],
+    },
+    {
+      title: 'Backend',
+      color: 'text-blue-600',
+      skills: [
+        { name: 'Java / Core Java', icon: <FaJava className="text-red-700" /> },
+        { name: 'Spring Boot / JPA', icon: <SiSpringboot className="text-green-600" /> },
+        { name: 'REST APIs / GraphQL', icon: <SiGraphql className="text-pink-600" /> },
+        { name: 'Multithreading / JDBC', icon: <FaCode className="text-gray-700" /> },
+      ],
+    },
+    {
+      title: 'Database',
+      color: 'text-green-600',
+      skills: [
+        { name: 'PostgreSQL / MySQL', icon: <SiPostgresql className="text-blue-600" /> },
+        { name: 'MongoDB', icon: <SiMongodb className="text-green-700" /> },
+        { name: 'Oracle / PL-SQL', icon: <FaDatabase className="text-indigo-700" /> },
+      ],
+    },
+    {
+      title: 'DevOps & Cloud',
+      color: 'text-yellow-600',
+      skills: [
+        { name: 'Docker / Kubernetes', icon: <SiDocker className="text-blue-600" /> },
+        { name: 'Jenkins / CI-CD', icon: <SiJenkins className="text-pink-600" /> },
+        { name: 'AWS / Azure / GCP', icon: <FaAws className="text-yellow-500" /> },
+        { name: 'Bitbucket / Git', icon: <SiBitbucket className="text-blue-700" /> },
+      ],
+    },
+    {
+      title: 'Testing & Tools',
+      color: 'text-purple-600',
+      skills: [
+        { name: 'JUnit / Mockito / TestNG', icon: <FaBug className="text-green-600" /> },
+        { name: 'Selenium / JMeter', icon: <SiSelenium className="text-indigo-700" /> },
+        { name: 'Linux / Bash', icon: <FaLinux className="text-black" /> },
+        { name: 'IntelliJ / VS Code', icon: <FaTools className="text-gray-700" /> },
+      ],
+    },
+  ];
+
   return (
-    <section
-      id="skills"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      className="px-6 py-20 bg-gray-50 text-gray-800"
-    >
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="flex justify-center mt-6 mb-4 text-blue-600 text-4xl" data-aos="zoom-in" data-aos-delay="200">
-          <FaTools />
+    <section id="skills" className="py-20 px-6 bg-gray-50 text-gray-800" data-aos="fade-up">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-teal-700">Technical Skills</h2>
         </div>
-        <h2 className="text-4xl font-bold mb-10" data-aos="zoom-in" data-aos-delay="300">
-          Skills
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-lg text-center">
 
-          <div data-aos="flip-left"><FaCode className="text-3xl mx-auto mb-2 text-purple-700" />C#</div>
-          <div data-aos="flip-right"><FaCogs className="text-3xl mx-auto mb-2 text-blue-600" />.NET Core / MVC</div>
-          <div data-aos="flip-left"><FaDatabase className="text-3xl mx-auto mb-2 text-indigo-700" />SQL Server</div>
-          <div data-aos="flip-right"><SiMongodb className="text-3xl mx-auto mb-2 text-green-600" />MongoDB</div>
-
-          <div data-aos="flip-left"><FaReact className="text-3xl mx-auto mb-2 text-blue-500" />React.js</div>
-          <div data-aos="flip-right"><SiAngular className="text-3xl mx-auto mb-2 text-red-600" />Angular</div>
-          <div data-aos="flip-left"><SiTypescript className="text-3xl mx-auto mb-2 text-blue-700" />TypeScript</div>
-          <div data-aos="flip-right"><SiJavascript className="text-3xl mx-auto mb-2 text-yellow-500" />JavaScript</div>
-
-          <div data-aos="flip-left"><FaHtml5 className="text-3xl mx-auto mb-2 text-orange-600" />HTML5</div>
-          <div data-aos="flip-right"><FaCss3Alt className="text-3xl mx-auto mb-2 text-blue-600" />CSS3</div>
-          <div data-aos="flip-left"><SiRedux className="text-3xl mx-auto mb-2 text-purple-600" />Redux</div>
-          <div data-aos="flip-right"><SiJson className="text-3xl mx-auto mb-2 text-gray-700" />JSON / REST</div>
-
-          <div data-aos="flip-left"><FaGitAlt className="text-3xl mx-auto mb-2 text-red-600" />Git / GitHub</div>
-          <div data-aos="flip-right"><SiJenkins className="text-3xl mx-auto mb-2 text-pink-600" />Jenkins</div>
-          <div data-aos="flip-left"><FaCloud className="text-3xl mx-auto mb-2 text-blue-500" />Azure DevOps</div>
-          <div data-aos="flip-right"><SiTerraform className="text-3xl mx-auto mb-2 text-indigo-500" />Terraform</div>
-
-          <div data-aos="flip-left"><FaDocker className="text-3xl mx-auto mb-2 text-blue-500" />Docker</div>
-          <div data-aos="flip-right"><SiKubernetes className="text-3xl mx-auto mb-2 text-blue-400" />Kubernetes</div>
-          <div data-aos="flip-left"><FaAws className="text-3xl mx-auto mb-2 text-yellow-500" />AWS</div>
-          <div data-aos="flip-right"><FaCloud className="text-3xl mx-auto mb-2 text-blue-700" />Azure</div>
-
-          <div data-aos="flip-left"><SiGraphql className="text-3xl mx-auto mb-2 text-pink-600" />GraphQL</div>
-          <div data-aos="flip-right"><FaCode className="text-3xl mx-auto mb-2 text-gray-800" />Web API</div>
-          <div data-aos="flip-left"><FaTools className="text-3xl mx-auto mb-2 text-indigo-600" />VS / VS Code</div>
-          <div data-aos="flip-right"><SiPostman className="text-3xl mx-auto mb-2 text-orange-500" />Postman</div>
-
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {categories.map((cat, idx) => (
+            <div
+              key={cat.title}
+              className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
+              data-aos="zoom-in"
+              data-aos-delay={idx * 100}
+            >
+              <h3 className={`text-xl font-bold mb-4 ${cat.color}`}>{cat.title}</h3>
+              <ul className="space-y-3">
+                {cat.skills.map((skill, i) => (
+                  <li key={i} className="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition">
+                    <span className="text-2xl">{skill.icon}</span>
+                    <span>{skill.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>
