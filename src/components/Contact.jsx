@@ -19,8 +19,7 @@ export default function Contact() {
             <FaMapMarkerAlt className="text-blue-600 text-xl mt-1 animate-pulse" />
             <div>
               <h4 className="text-lg font-semibold text-gray-800">Location</h4>
-              <p className="text-gray-700">
-Alpharetta, GA</p>
+              <p className="text-gray-700">Alpharetta, GA</p>
             </div>
           </div>
 
