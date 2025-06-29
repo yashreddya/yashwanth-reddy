@@ -56,7 +56,7 @@ const Hero = () => {
             <FaMapMarkerAlt className="mr-2 text-emerald-600" /> Atlanta, GA
           </div>
           <div className="flex items-center">
-            <FaPhoneAlt className="mr-2 text-emerald-600" /> (470)-601-3859
+            <FaPhoneAlt className="mr-2 text-emerald-600" />+1 (678) 208 9897
           </div>
           <div className="flex items-center">
             <FaEnvelope className="mr-2 text-emerald-600" />
